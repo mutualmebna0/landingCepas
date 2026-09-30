@@ -20,8 +20,8 @@
                         brand: {
                             beige: '#F4EFE6',
                             lightbeige: '#FBF9F6',
-                            wine: '#6B2737',
-                            darkwine: '#4A1C26'
+                            wine: '#75619A',     /* lila sofisticado */
+                            darkwine: '#3B3050'  /* lila profundo (berenjena) */
                         }
                     },
                     fontFamily: {
@@ -36,7 +36,7 @@
     <style>
         body {
             background-color: #F4EFE6; /* brand-beige */
-            color: #4A1C26; /* brand-darkwine */
+            color: #3B3050; /* brand-darkwine (lila profundo) */
         }
 
         /* Scroll Animations */
@@ -56,11 +56,11 @@
         .delay-300 { transition-delay: 300ms; }
         .delay-400 { transition-delay: 400ms; }
         
-        /* Utility for the WA button hover pulse using wine color */
+        /* Utility for the WA button hover pulse using lilac color */
         @keyframes pulse-soft {
-            0% { box-shadow: 0 0 0 0 rgba(107, 39, 55, 0.4); }
-            70% { box-shadow: 0 0 0 15px rgba(107, 39, 55, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(107, 39, 55, 0); }
+            0% { box-shadow: 0 0 0 0 rgba(117, 97, 154, 0.4); }
+            70% { box-shadow: 0 0 0 15px rgba(117, 97, 154, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(117, 97, 154, 0); }
         }
         .hover-pulse:hover {
             animation: pulse-soft 1.5s infinite;
@@ -96,7 +96,7 @@
         <!-- Background Image (Vineyard/Mendoza vibe) -->
         <div class="absolute inset-0 z-0 bg-brand-darkwine">
             <img src="imagenes/IMG_6646.JPG" alt="Viñedos en Mendoza" class="w-full h-full object-cover transform scale-105 animate-[kenburns_20s_ease-out_forwards] mix-blend-overlay opacity-80">
-            <!-- Elegant Wine Overlay -->
+            <!-- Elegant Lilac Overlay -->
             <div class="absolute inset-0 bg-gradient-to-b from-brand-darkwine/80 via-brand-wine/50 to-brand-darkwine/90"></div>
         </div>
         
@@ -318,7 +318,7 @@
 
             window.addEventListener('scroll', () => {
                 if (window.scrollY > 50) {
-                    // Scrolled state (Light background for Beige/Wine theme)
+                    // Scrolled state (Light background for Beige/Lilac theme)
                     navbar.classList.remove('bg-transparent', 'text-white', 'py-6');
                     navbar.classList.add('bg-brand-lightbeige', 'text-brand-darkwine', 'shadow-sm', 'py-4', 'border-b', 'border-brand-wine/10');
                     
